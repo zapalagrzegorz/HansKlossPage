@@ -1,28 +1,36 @@
 $(document).ready(function() {
     var clear = function() {
-        $("#about").removeClass("active");
-        $("#about").removeClass("in");
+        $("#aboutSeries").removeClass("active");
+        $("#aboutSeries").removeClass("in");
+        $("#hans").removeClass("active");
         $("#dialogi").removeClass("active");
         $("#cytaty").removeClass("active");
-        $("#liAbout").removeClass("active");
-        $("#liCytaty").removeClass("active");
-        $("#liDialogi").removeClass("active");
+        $("#pillAboutSeries").removeClass("active");
+        $("#pillHans").removeClass("active");
+        $("#pillCytaty").removeClass("active");
+        $("#pillDialogi").removeClass("active");
     };
     $('.showMain').click(function() {
         clear();
-        $("#liAbout").addClass("active");
-        $("#about").addClass("active");
-        $("#about").addClass("in");
+        $("#pillAboutSeries").addClass("active");
+        $("#aboutSeries").addClass("active");
+        $("#aboutSeries").addClass("in");
+    });
+    $('#showHans').click(function() {
+        clear();
+        $("#pillHans").addClass("active");
+        $("#hans").addClass("active");
+        $("#hans").addClass("in");
     });
     $('#showQuotes').click(function() {
         clear();
-        $("#liCytaty").addClass("active");
+        $("#pillCytaty").addClass("active");
         $("#cytaty").addClass("active");
         $("#cytaty").addClass("in");
     });
     $('#showDialogs').click(function() {
         clear();
-        $("#liDialogi").addClass("active");
+        $("#pillDialogi").addClass("active");
         $("#dialogi").addClass("active");
         $("#dialogi").addClass("in");
     });

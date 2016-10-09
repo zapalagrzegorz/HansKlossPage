@@ -57,6 +57,9 @@ main {
 .blockquote q {
     font-style: italic;
 }
+#hans {
+    margin: 5vh 0;
+}
 .photo {
     margin-top: 1px;
     max-width: 100%;
@@ -81,8 +84,8 @@ main {
 form .form-group:first-child {
     padding-left: 0;
 }
-article {
-    margin: 10vh;
+section {
+    margin: 5vh 0;
 }
 #introToHans {
     margin-bottom: 0;

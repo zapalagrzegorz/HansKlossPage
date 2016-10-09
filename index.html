@@ -10,24 +10,24 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="70">
     <header id="header">
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-	                </button>
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                     <a class="navbar-brand scroll" href="#header">
                         <img alt="Brand" src="http://nieszablonowo.pl/wp-content/uploads/2013/08/image015.jpg" height="30" width="20">
                     </a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li><a class="scroll" href="#odcinki">Odcinki</a></li>
+                        <li><a class="scroll showMain" href="#main">Serial</a></li>
                         <li><a class="scroll" href="#galeria">Galeria</a></li>
                         <li><a class="scroll" href="#kontakt">Kontakt</a></li>
                     </ul>
@@ -35,7 +35,7 @@
                         <div class="form-group">
                             <input type="text" class="form-control" placeholder="Szukaj">
                         </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="submit" class="btn btn-default">Szukaj</button>
                     </form>
                 </div>
             </div>
@@ -55,7 +55,7 @@
                     <div class="item active item-0">
                         <div class="carousel-caption">
                             <h2 class="text-center">Stawka większa niż życie!<small><p><q>J-23 znów nadaje</q></p></small></h2>
-                            <a id="showMain" class="btn btn-primary center-block scroll" href="#main">Zobacz więcej!</a>
+                            <a class="btn btn-primary center-block scroll showMain" href="#main">Zobacz więcej!</a>
                         </div>
                     </div>
                     <div class="item item-1">
@@ -79,7 +79,7 @@
                     <div class="item item-4">
                         <div class="carousel-caption">
                             <h2 class="text-center">O Hansie</h2>
-                            <a class="btn btn-primary center-block scroll" href="#introToHans">Czytam</a>
+                            <a id="showHans" class="btn btn-primary center-block scroll" href="#main">Czytam</a>
                         </div>
                     </div>
                 </div>
@@ -98,12 +98,13 @@
         <section class="cytatySection">
             <div class="container">
                 <ul class="nav nav-pills nav-justified">
-                    <li id="liAbout" class="active "><a data-toggle="pill" href="#about ">O serialu</a></li>
-                    <li id="liCytaty"><a data-toggle="pill" href="#cytaty">Cytaty</a></li>
-                    <li id="liDialogi"><a data-toggle="pill" href="#dialogi">Dialogi</a></li>
+                    <li id="pillAboutSeries" class="active "><a data-toggle="pill" href="#aboutSeries">O serialu</a></li>
+                    <li id="pillHans"><a data-toggle="pill" href="#hans">O Hansie</a></li>
+                    <li id="pillCytaty"><a data-toggle="pill" href="#cytaty">Cytaty</a></li>
+                    <li id="pillDialogi"><a data-toggle="pill" href="#dialogi">Dialogi</a></li>
                 </ul>
                 <div class="tab-content">
-                    <div id="about" class="tab-pane fade in active">
+                    <div id="aboutSeries" class="tab-pane fade in active">
                         <h3>Fabuła</h3>
                         <p>Akcja serialu rozpoczyna się w roku 1941. Młody Polak Stanisław Kolicki zamierza przedostać się do Związku Radzieckiego, by przekazać informację o koncentracji wojsk niemieckich na granicy. Zostaje przez radziecki wywiad zatrzymany.
                             Będąc łudząco podobnym do niedawno aresztowanego oficera niemieckiego Hansa Klossa, zajmuje miejsce swojego „sobowtóra” w wywiadzie niemieckim – Abwehrze i jako agent J-23 rozpoczyna misję szpiegowską.</p>
@@ -111,6 +112,28 @@
                         <p>Scenariusz serialu napisali Andrzej Szypulski i Zbigniew Safjan, zainspirowani pierwszym filmem o Jamesie Bondzie, Doktor No z 1962.</p>
                         <p>Scenariusz – Andrzej Zbych (pseudonim, piszących razem, Andrzeja Szypulskiego i Zbigniewa Safjana).</p>
                         <p>Reżyseria – Janusz Morgenstern i Andrzej Konic (po 9 odcinków).</p>
+                    </div>
+                    <div id="hans" class="tab-pane fade">
+                        <div class="row">
+                            <div class="media">
+                                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                                    <div class="media-left">
+                                        <a href="http://kuzynka-edyta.blogspot.com/2009/08/stawka-wieksza-niz-zycie-16.html">
+                                            <img class="media-object" src="http://2.bp.blogspot.com/-HvF63O_hffw/VnRUjNx7toI/AAAAAAAADkA/4qLFQDz_YaE/s1600/Stawka%2Bwi%25C4%2599ksza%2Bni%25C5%25BC%2B%25C5%25BCycie%2B-%2B16.jpg" alt="Hans Kloss">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+                                    <div class="media-body">
+                                        <h3 class="media-heading">O Hansie...</h3>
+                                        <p class="text-justify"><strong>Hans Kloss</strong> – fikcyjny bohater (właściwie dwaj bohaterowie, gdyż zarówno więziony w ZSRR Niemiec o takim imieniu i nazwisku, jak i podszywający się pod niego Polak Stanisław Kolicki) serii przedstawień
+                                            Teatru Telewizji, pt. Stawka większa niż życie, serialu telewizyjnego pod tym samym tytułem, serii opowiadań w formie książkowej (zbeletryzowane scenariusze), komiksów z cyklu Kapitan Kloss, gry komputerowej
+                                            Hans Kloss wydanej przez LK Avalon w 1992 oraz filmu Hans Kloss. Stawka większa niż śmierć.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div id="cytaty" class="tab-pane fade">
                         <h3 class="bg-danger">Herman Brunner</h3>
@@ -134,7 +157,7 @@
                         <blockquote>
                             <p>Takie sztuczki nie ze mną, Brunner.</p>
                             <footer><cite title="Source Title">odc. 14, Edyta. </cite>Cytat popularny w nieprawidłowej wersji: <q><strong>Nie ze
-	                            mną te numery, Brunner.</strong></q></footer>
+                                    mną te numery, Brunner.</strong></q></footer>
                         </blockquote>
                         <blockquote>
                             <p>Wyjątkowa z ciebie kanalia, Brunner!</p>
@@ -176,7 +199,6 @@
                 </div>
             </div>
         </section>
-
         <section id="galeria" class="gallery">
             <div class="container">
                 <h2>Galeria</h2>
@@ -214,8 +236,8 @@
                         <div class="visible-xs-block clearfix">
                             <div class="dropdown dropdown-btn pull-left">
                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                    Lubię to! <span class="caret"></span>
-	                                    </button>
+                                            Lubię to! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Topowa scena</a></li>
                                     <li><a href="#">Kanon</a></li>
@@ -224,8 +246,8 @@
                             </div>
                             <div class="dropdown dropdown-btn pull-right">
                                 <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                        Nie lubię! <span class="caret"></span>
-	                                    </button>
+                                                Nie lubię! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Przeceniona</a></li>
                                     <li><a href="#">Pomyłka roku</a></li>
@@ -247,7 +269,7 @@
                         </div>
                         <!-- Modal -->
                         <div id="photo2" class="modal fade" role="dialog">
-                            <div class="modal-dialog modal-lg">
+                            <div class="modal-dialog modal-md">
                                 <!-- Modal content-->
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -266,8 +288,8 @@
                         <div class="visible-xs-block">
                             <div class="dropdown dropdown-btn pull-left">
                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                    Lubię to! <span class="caret"></span>
-	                                    </button>
+                                            Lubię to! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Topowa scena</a></li>
                                     <li><a href="#">Kanon</a></li>
@@ -276,8 +298,8 @@
                             </div>
                             <div class="dropdown dropdown-btn pull-right">
                                 <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                        Nie lubię! <span class="caret"></span>
-	                                    </button>
+                                                Nie lubię! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Przeceniona</a></li>
                                     <li><a href="#">Pomyłka roku</a></li>
@@ -291,8 +313,8 @@
                         <div class="col-sm-6">
                             <div class="dropdown dropdown-btn pull-left">
                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                    Lubię to! <span class="caret"></span>
-	                                    </button>
+                                            Lubię to! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Topowa scena</a></li>
                                     <li><a href="#">Kanon</a></li>
@@ -301,8 +323,8 @@
                             </div>
                             <div class="dropdown dropdown-btn pull-right">
                                 <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                        Nie lubię! <span class="caret"></span>
-	                                    </button>
+                                                Nie lubię! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Przeceniona</a></li>
                                     <li><a href="#">Pomyłka roku</a></li>
@@ -313,8 +335,8 @@
                         <div class="col-sm-6">
                             <div class="dropdown dropdown-btn pull-left">
                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                    Lubię to! <span class="caret"></span>
-	                                    </button>
+                                            Lubię to! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Topowa scena</a></li>
                                     <li><a href="#">Kanon</a></li>
@@ -323,8 +345,8 @@
                             </div>
                             <div class="dropdown dropdown-btn pull-right">
                                 <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                        Nie lubię! <span class="caret"></span>
-	                                    </button>
+                                                Nie lubię! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Przeceniona</a></li>
                                     <li><a href="#">Pomyłka roku</a></li>
@@ -364,8 +386,8 @@
                         <div class="visible-xs-block">
                             <div class="dropdown dropdown-btn pull-left">
                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                    Lubię to! <span class="caret"></span>
-	                                    </button>
+                                            Lubię to! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Topowa scena</a></li>
                                     <li><a href="#">Kanon</a></li>
@@ -374,8 +396,8 @@
                             </div>
                             <div class="dropdown dropdown-btn pull-right">
                                 <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                        Nie lubię! <span class="caret"></span>
-	                                    </button>
+                                                Nie lubię! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Przeceniona</a></li>
                                     <li><a href="#">Pomyłka roku</a></li>
@@ -401,7 +423,7 @@
                                 <div class="modal-content">
                                     <div class="modal-header">
                                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title text-center">Hans nadaje</h4>
+                                        <h4 class="modal-title text-center">J-23 nadaje</h4>
                                     </div>
                                     <div class="modal-body">
                                         <a href="#" class="thumbnail">
@@ -415,8 +437,8 @@
                         <div class="visible-xs-block">
                             <div class="dropdown dropdown-btn pull-left">
                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                    Lubię to! <span class="caret"></span>
-	                                    </button>
+                                            Lubię to! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Topowa scena</a></li>
                                     <li><a href="#">Kanon</a></li>
@@ -425,8 +447,8 @@
                             </div>
                             <div class="dropdown dropdown-btn pull-right">
                                 <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                        Nie lubię! <span class="caret"></span>
-	                                    </button>
+                                                Nie lubię! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Przeceniona</a></li>
                                     <li><a href="#">Pomyłka roku</a></li>
@@ -440,8 +462,8 @@
                         <div class="col-sm-6">
                             <div class="dropdown dropdown-btn pull-left">
                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                    Lubię to! <span class="caret"></span>
-	                                    </button>
+                                            Lubię to! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Topowa scena</a></li>
                                     <li><a href="#">Kanon</a></li>
@@ -450,8 +472,8 @@
                             </div>
                             <div class="dropdown dropdown-btn pull-right">
                                 <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                        Nie lubię! <span class="caret"></span>
-	                                    </button>
+                                                Nie lubię! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Przeceniona</a></li>
                                     <li><a href="#">Pomyłka roku</a></li>
@@ -462,8 +484,8 @@
                         <div class="col-sm-6">
                             <div class="dropdown dropdown-btn pull-left">
                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                    Lubię to! <span class="caret"></span>
-	                                    </button>
+                                            Lubię to! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Topowa scena</a></li>
                                     <li><a href="#">Kanon</a></li>
@@ -472,8 +494,8 @@
                             </div>
                             <div class="dropdown dropdown-btn pull-right">
                                 <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                        Nie lubię! <span class="caret"></span>
-	                                    </button>
+                                                Nie lubię! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Przeceniona</a></li>
                                     <li><a href="#">Pomyłka roku</a></li>
@@ -489,8 +511,8 @@
                         <div class="col-md-3">
                             <div class="dropdown dropdown-btn pull-left">
                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                    Lubię to! <span class="caret"></span>
-	                                    </button>
+                                            Lubię to! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Topowa scena</a></li>
                                     <li><a href="#">Kanon</a></li>
@@ -499,8 +521,8 @@
                             </div>
                             <div class="dropdown dropdown-btn pull-right">
                                 <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                        Nie lubię! <span class="caret"></span>
-	                                    </button>
+                                                Nie lubię! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Przeceniona</a></li>
                                     <li><a href="#">Pomyłka roku</a></li>
@@ -511,8 +533,8 @@
                         <div class="col-md-3">
                             <div class="dropdown dropdown-btn pull-left">
                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                    Lubię to! <span class="caret"></span>
-	                                    </button>
+                                            Lubię to! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Topowa scena</a></li>
                                     <li><a href="#">Kanon</a></li>
@@ -521,8 +543,8 @@
                             </div>
                             <div class="dropdown dropdown-btn pull-right">
                                 <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                        Nie lubię! <span class="caret"></span>
-	                                    </button>
+                                                Nie lubię! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Przeceniona</a></li>
                                     <li><a href="#">Pomyłka roku</a></li>
@@ -533,8 +555,8 @@
                         <div class="col-md-3">
                             <div class="dropdown dropdown-btn pull-left">
                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                    Lubię to! <span class="caret"></span>
-	                                    </button>
+                                            Lubię to! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Topowa scena</a></li>
                                     <li><a href="#">Kanon</a></li>
@@ -543,8 +565,8 @@
                             </div>
                             <div class="dropdown dropdown-btn pull-right">
                                 <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                        Nie lubię! <span class="caret"></span>
-	                                    </button>
+                                                Nie lubię! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Przeceniona</a></li>
                                     <li><a href="#">Pomyłka roku</a></li>
@@ -555,8 +577,8 @@
                         <div class="col-md-3">
                             <div class="dropdown dropdown-btn pull-left">
                                 <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                    Lubię to! <span class="caret"></span>
-	                                    </button>
+                                            Lubię to! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Topowa scena</a></li>
                                     <li><a href="#">Kanon</a></li>
@@ -565,8 +587,8 @@
                             </div>
                             <div class="dropdown dropdown-btn pull-right">
                                 <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	                                        Nie lubię! <span class="caret"></span>
-	                                    </button>
+                                                Nie lubię! <span class="caret"></span>
+                                            </button>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Przeceniona</a></li>
                                     <li><a href="#">Pomyłka roku</a></li>
@@ -578,30 +600,6 @@
                 </div>
             </div>
         </section>
-        <article id="introToHans">
-            <div class="container">
-                <div class="row">
-                    <div class="media">
-                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                            <div class="media-left">
-                                <a href="http://kuzynka-edyta.blogspot.com/2009/08/stawka-wieksza-niz-zycie-16.html">
-                                    <img class="media-object" src="http://2.bp.blogspot.com/-HvF63O_hffw/VnRUjNx7toI/AAAAAAAADkA/4qLFQDz_YaE/s1600/Stawka%2Bwi%25C4%2599ksza%2Bni%25C5%25BC%2B%25C5%25BCycie%2B-%2B16.jpg" alt="Hans Kloss">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
-                            <div class="media-body">
-                                <h3 class="media-heading">O Hansie...</h3>
-                                <p class="text-justify"><strong>Hans Kloss</strong> – fikcyjny bohater (właściwie dwaj bohaterowie, gdyż zarówno więziony w ZSRR Niemiec o takim imieniu i nazwisku, jak i podszywający się pod niego Polak Stanisław Kolicki) serii przedstawień Teatru
-                                    Telewizji, pt. Stawka większa niż życie, serialu telewizyjnego pod tym samym tytułem, serii opowiadań w formie książkowej (zbeletryzowane scenariusze), komiksów z cyklu Kapitan Kloss, gry komputerowej Hans Kloss wydanej
-                                    przez LK Avalon w 1992 oraz filmu Hans Kloss. Stawka większa niż śmierć.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
         <section id="odcinki">
             <div class="container">
                 <div class="table-responsive">
