@@ -1,0 +1,160 @@
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+[class*="item-"] {
+    min-height: 85vh;
+    background-size: cover;
+}
+.hero {
+    margin-top: 50px;
+    background-color: #111;
+    min-height: calc(100vh - 50px);
+}
+.container .hero {
+    max-width: 80vw;
+}
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 25vh auto 0;
+    max-width: 800px;
+    padding: 30px;
+}
+.carousel-caption small {
+    color: #CCC;
+}
+.carousel-caption a {
+    display: inline-block;
+}
+.item-0 {
+    background: url(http://www.focus.pl/upload/galleries/15/dlaczego-hans-kloss-nazywa-sie-hans-15773_l.jpg) no-repeat center scroll;
+    background-size: cover;
+}
+.item-1 {
+    background: url(http://s.tvp.pl/images/b/8/1/uid_b81953a50ebf02201d07febe1c78c2961318164085396_width_633_play_0_pos_3_gs_0.jpg) no-repeat center scroll;
+    background-size: cover;
+}
+.item-2 {
+    background: url(http://s.tvp.pl/images/a/7/f/uid_a7f46f13f2dff3d65cd374de20fba72b1318161382256_width_633_play_0_pos_3_gs_0.jpg) no-repeat center scroll;
+    background-size: cover;
+}
+.item-3 {
+    background: url(http://2.bp.blogspot.com/-s8jnjcf0k0I/VfRWGWVegMI/AAAAAAAAngY/7AvAxTL15mo/s1600/1.png) no-repeat center scroll;
+    background-size: contain;
+}
+.item-4 {
+    background: url(http://zegarkiipasja.pl/images/015_Maciek/VINTAGE/KLOSS/Zegarki_Hansa_Klossa_12.jpg) no-repeat center scroll;
+    background-size: contain;
+}
+main {
+    margin-top: 5vh;
+}
+.nav-pills a {
+    font-size: 1.25em;
+}
+.nav-pills p {
+    font-size: 1.1em;
+}
+.blockquote q {
+    font-style: italic;
+}
+.photo {
+    margin-top: 1px;
+    max-width: 100%;
+    height: 50vh;
+}
+.gallery .btn-danger {
+    background-color: #f3cbca;
+    border-color: #efbab8;
+}
+.gallery .btn-success {
+    background-color: #cee9ce;
+    border-color: #bde2bd;
+}
+.table {
+    margin-top: 40px;
+}
+.form {
+    background-color: #ffffff;
+    background-image: url("https://www.transparenttextures.com/patterns/60-lines.png");
+    padding-bottom: 30px;
+}
+form .form-group:first-child {
+    padding-left: 0;
+}
+article {
+    margin: 10vh;
+}
+#introToHans {
+    margin-bottom: 0;
+}
+#odcinki {
+    margin-bottom: 5vh;
+}
+.media img {
+    max-width: 100%;
+}
+@media (min-width: 768px) and (max-width:992px) {
+    .header_box {
+        margin: 25vh auto;
+    }
+    .photo {
+        max-width: 100%;
+        height: 75vh;
+    }
+    figure {
+        margin-top: 10px;
+    }
+}
+@media (max-width: 767px) {
+    .jumbotron {
+        background-attachment: scroll;
+        background-position: 30%;
+    }
+    .header_box {
+        margin: 39vh auto;
+    }
+    figure {
+        margin-top: 10px;
+    }
+    form .form-group:nth-child(2) {
+        padding-left: 0;
+    }
+    .media img {
+        max-width: 50%;
+        margin-left: 10px;
+    }
+    .carousel-caption {
+        padding: 15px 15px 20px 15px;
+    }
+    .carousel-caption h2 {
+        font-size: 1.3em;
+        padding: 10px;
+        margin: 0;
+    }
+}
+@media only screen and (orientation: landscape) and (max-width: 767px) {
+    .container .hero {
+        max-width: 95vw;
+    }
+    .item-0 {
+        background-size: contain;
+    }
+    .item-1 {
+        background-size: cover;
+    }
+}
+@media only screen and (orientation: portrait) and (max-width: 767px) {
+    .item-0 {
+        background-size: 100% 45%;
+    }
+    .carousel-caption {
+        left: 10%;
+        right: 10%;
+        padding-top: 5px;
+    }
+    .item-1,
+    .item-2,
+    .item-3 {
+        background-size: 100% 50%;
+    }
+}
