@@ -1,668 +1,1063 @@
 <!DOCTYPE html>
 <html lang="pl">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Tribute page</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,600i,700,700i,800" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" type="text/css" href="style.css" />
-</head>
+  </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="70">
+  <body data-spy="scroll" data-target=".navbar" data-offset="70">
     <header id="header">
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    <a class="navbar-brand scroll" href="#header">
-                        <img alt="Brand" src="http://nieszablonowo.pl/wp-content/uploads/2013/08/image015.jpg" height="30" width="20">
-                    </a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li><a class="scroll showMain" href="#main">Serial</a></li>
-                        <li><a class="scroll" href="#galeria">Galeria</a></li>
-                        <li><a class="scroll" href="#kontakt">Kontakt</a></li>
-                    </ul>
-                    <form class="navbar-form navbar-right">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Szukaj">
-                        </div>
-                        <button type="submit" class="btn btn-default">Szukaj</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <section class="hero">
-        <div class="container">
-            <div id="j23Carousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#j23Carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#j23Carousel" data-slide-to="1"></li>
-                    <li data-target="#j23Carousel" data-slide-to="2"></li>
-                    <li data-target="#j23Carousel" data-slide-to="3"></li>
-                    <li data-target="#j23Carousel" data-slide-to="4"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active item-0">
-                        <div class="carousel-caption">
-                            <h2 class="text-center">Stawka większa niż życie!<small><p><q>J-23 znów nadaje</q></p></small></h2>
-                            <a class="btn btn-primary center-block scroll showMain" href="#main">Zobacz więcej!</a>
-                        </div>
-                    </div>
-                    <div class="item item-1">
-                        <div class="carousel-caption">
-                            <h2 class="text-center">Bruner, Ty... </h2>
-                            <a id="showQuotes" href="#main" class="btn btn-primary center-block scroll">Cytaty</a>
-                        </div>
-                    </div>
-                    <div class="item item-2">
-                        <div class="carousel-caption">
-                            <h2 class="text-center">Zobacz galerię!</h2>
-                            <a class="btn btn-primary center-block scroll" href="#galeria">Oglądam!</a>
-                        </div>
-                    </div>
-                    <div class="item item-3">
-                        <div class="carousel-caption">
-                            <h2 class="text-center">Najlepsze kasztany...</h2>
-                            <a id="showDialogs" class="btn btn-primary center-block scroll" href="#main">Dialogi</a>
-                        </div>
-                    </div>
-                    <div class="item item-4">
-                        <div class="carousel-caption">
-                            <h2 class="text-center">O Hansie</h2>
-                            <a id="showHans" class="btn btn-primary center-block scroll" href="#main">Czytam</a>
-                        </div>
-                    </div>
-                </div>
-                <a class="left carousel-control" href="#j23Carousel" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#j23Carousel" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
-            </div>
-        </div>
-    </section>
-    <main id="main">
-        <section class="cytatySection">
-            <div class="container">
-                <ul class="nav nav-pills nav-justified">
-                    <li id="pillAboutSeries" class="active "><a data-toggle="pill" href="#aboutSeries">O serialu</a></li>
-                    <li id="pillHans"><a data-toggle="pill" href="#hans">O Hansie</a></li>
-                    <li id="pillCytaty"><a data-toggle="pill" href="#cytaty">Cytaty</a></li>
-                    <li id="pillDialogi"><a data-toggle="pill" href="#dialogi">Dialogi</a></li>
-                </ul>
-                <div class="tab-content">
-                    <div id="aboutSeries" class="tab-pane fade in active">
-                        <h3>Fabuła</h3>
-                        <p>Akcja serialu rozpoczyna się w roku 1941. Młody Polak Stanisław Kolicki zamierza przedostać się do Związku Radzieckiego, by przekazać informację o koncentracji wojsk niemieckich na granicy. Zostaje przez radziecki wywiad zatrzymany.
-                            Będąc łudząco podobnym do niedawno aresztowanego oficera niemieckiego Hansa Klossa, zajmuje miejsce swojego „sobowtóra” w wywiadzie niemieckim – Abwehrze i jako agent J-23 rozpoczyna misję szpiegowską.</p>
-                        <h3>Twórcy</h3>
-                        <p>Scenariusz serialu napisali Andrzej Szypulski i Zbigniew Safjan, zainspirowani pierwszym filmem o Jamesie Bondzie, Doktor No z 1962.</p>
-                        <p>Scenariusz – Andrzej Zbych (pseudonim, piszących razem, Andrzeja Szypulskiego i Zbigniewa Safjana).</p>
-                        <p>Reżyseria – Janusz Morgenstern i Andrzej Konic (po 9 odcinków).</p>
-                    </div>
-                    <div id="hans" class="tab-pane fade">
-                        <div class="row">
-                            <div class="media">
-                                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                                    <div class="media-left">
-                                        <a href="http://kuzynka-edyta.blogspot.com/2009/08/stawka-wieksza-niz-zycie-16.html">
-                                            <img class="media-object" src="http://2.bp.blogspot.com/-HvF63O_hffw/VnRUjNx7toI/AAAAAAAADkA/4qLFQDz_YaE/s1600/Stawka%2Bwi%25C4%2599ksza%2Bni%25C5%25BC%2B%25C5%25BCycie%2B-%2B16.jpg" alt="Hans Kloss">
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
-                                    <div class="media-body">
-                                        <h3 class="media-heading">O Hansie...</h3>
-                                        <p class="text-justify"><strong>Hans Kloss</strong> – fikcyjny bohater (właściwie dwaj bohaterowie, gdyż zarówno więziony w ZSRR Niemiec o takim imieniu i nazwisku, jak i podszywający się pod niego Polak Stanisław Kolicki) serii przedstawień
-                                            Teatru Telewizji, pt. Stawka większa niż życie, serialu telewizyjnego pod tym samym tytułem, serii opowiadań w formie książkowej (zbeletryzowane scenariusze), komiksów z cyklu Kapitan Kloss, gry komputerowej
-                                            Hans Kloss wydanej przez LK Avalon w 1992 oraz filmu Hans Kloss. Stawka większa niż śmierć.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="cytaty" class="tab-pane fade">
-                        <h3 class="bg-danger">Herman Brunner</h3>
-                        <blockquote>
-                            <p>Nie mogę patrzeć na bitego człowieka, nie mogę! Jeżeli bije ktoś inny.</p>
-                            <footer><cite title="Source Title">Odc. 8, Wielka wsypa</cite></footer>
-                        </blockquote>
-                        <blockquote>
-                            <p>Brunner alkohol i kobiety wyczuwa na kilometr.</p>
-                            <footer><cite title="Source Title">Odc. 14, Edyta</cite></footer>
-                        </blockquote>
-                        <blockquote>
-                            <p>Ja nigdy nie przegrywam ostatniej bitwy. </p>
-                            <footer><cite title="Source Title">Odc. 15, Oblężenie</cite></footer>
-                        </blockquote>
-                        <h3 class="bg-success">Hans Kloss</h3>
-                        <blockquote>
-                            <p>To świnia! Mógł mnie ochlapać. Nie potrafi uszanować niemieckiego munduru.</p>
-                            <footer><cite title="Source Title">Odc. 8, Wielka wsypa</cite></footer>
-                        </blockquote>
-                        <blockquote>
-                            <p>Takie sztuczki nie ze mną, Brunner.</p>
-                            <footer><cite title="Source Title">odc. 14, Edyta. </cite>Cytat popularny w nieprawidłowej wersji: <q><strong>Nie ze
-                                    mną te numery, Brunner.</strong></q></footer>
-                        </blockquote>
-                        <blockquote>
-                            <p>Wyjątkowa z ciebie kanalia, Brunner!</p>
-                            <footer><cite title="Source Title">Odc. 15, Oblężenie. </cite>Cytat popularny w nieprawidłowej wersji:
-                                <q><strong>Brunner, ty świnio!</strong></q></footer>
-                        </blockquote>
-                    </div>
-                    <div id="dialogi" class="tab-pane fade">
-                        <h3>Kasztany</h3>
-                        <blockquote>
-                            <p><b>Łącznik: </b>W Paryżu najlepsze kasztany są na placu Pigalle.</p>
-                            <p><b>Kloss: </b>Zuzanna lubi je tylko jesienią.</p>
-                            <p><b>Łącznik: </b>Przesyła ci świeżą partię.</p>
-                            <footer><cite title="Source Title">Odc. 11, Hasło.</cite></footer>
-                        </blockquote>
-                        <h3>Nord</h3>
-                        <blockquote>
-                            <p><b>Kloss: </b>Jak powinien wyglądać prawdziwy Nordyk?</p>
-                            <p><b>Eryk Getting: </b>Blondyn jak Hitler, smukły jak Göring, wysoki jak Goebbels.</p>
-                            <footer><cite title="Source Title">Odc. 9, Genialny plan pułkownika Krafta</cite></footer>
-                        </blockquote>
-                        <h3>Idiota</h3>
-                        <blockquote>
-                            <p><b>Wilhelm Canaris:</b> Dlaczego interesuje pana Christin Kield?</p>
-                            <p><b>Kloss:</b> Zakochałem się w niej.</p>
-                            <p><b>Wilhelm Canaris:</b> Pan jest idiotą, panie poruczniku.</p>
-                            <p><b>Kloss:</b> Tak jest, panie admirale.</p>
-                            <p><b>Wilhelm Canaris:</b> No więc to już ustaliliśmy.</p>
-                            <footer><cite title="Source Title">Odc. 12, Zdrada.</cite></footer>
-                        </blockquote>
-                        <h3>Dyskrecja</h3>
-                        <blockquote>
-                            <p><b> Geibel: </b>Gdybym był niedyskretny, zapytałbym, skąd pan ma na pięciomarkowe cygara.</p>
-                            <p><b>Brunner: </b>Ba! A gdybym ja był niedyskretny?</p>
-                            <p><b>Geibel: </b>Na szczęście obaj jesteśmy dyskretni.</p>
-                            <footer><cite title="Source Title">Odc. 12, Zdrada.</cite></footer>
-                        </blockquote>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="galeria" class="gallery">
-            <div class="container">
-                <h2>Galeria</h2>
-            </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <figure class="col-xs-12 col-sm-6 col-md-3 clearfix">
-                        <div class="hidden-xs visible-sm-block visible-md-block visible-lg-block">
-                            <a href="#" class="thumbnail" data-toggle="modal" data-target="#photo1">
-                                <img src="http://bi.gazeta.pl/im/85/24/e1/z14754949Q,Hans-Kloss-i-Hermann-Brunner.jpg" alt="Kloss i Hermann-Brunner">
-                            </a>
-                        </div>
-                        <div class="visible-xs-block">
-                            <a class="thumbnail">
-                                <img src="http://bi.gazeta.pl/im/85/24/e1/z14754949Q,Hans-Kloss-i-Hermann-Brunner.jpg" alt="Kloss i Hermann-Brunner">
-                            </a>
-                        </div>
-                        <!-- Modal -->
-                        <div id="photo1" class="modal fade" role="dialog">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title text-center">Hans i Brunner</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <a class="thumbnail">
-                                            <img src="http://bi.gazeta.pl/im/85/24/e1/z14754949Q,Hans-Kloss-i-Hermann-Brunner.jpg" alt="Kloss i Hermann-Brunner">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- xs opinion button-->
-                        <div class="visible-xs-block clearfix">
-                            <div class="dropdown dropdown-btn pull-left">
-                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Lubię to! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Topowa scena</a></li>
-                                    <li><a href="#">Kanon</a></li>
-                                    <li><a href="#">Jedna z moich ulubionych</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown dropdown-btn pull-right">
-                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Nie lubię! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Przeceniona</a></li>
-                                    <li><a href="#">Pomyłka roku</a></li>
-                                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </figure>
-                    <figure class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="hidden-xs visible-sm-block visible-md-block visible-lg-block">
-                            <a href="#" class="thumbnail" data-toggle="modal" data-target="#photo2">
-                                <img src="http://i.iplsc.com/nogi-pan-stawaly-sie-jak-z-waty-kiedy-obok-znajdywal-sie-han/0002AN3APVD6P394-C122-F4.jpg" alt="Kloss i kobiety">
-                            </a>
-                        </div>
-                        <div class="visible-xs-block">
-                            <a class="thumbnail">
-                                <img src="http://i.iplsc.com/nogi-pan-stawaly-sie-jak-z-waty-kiedy-obok-znajdywal-sie-han/0002AN3APVD6P394-C122-F4.jpg" alt="Kloss i kobiety">
-                            </a>
-                        </div>
-                        <!-- Modal -->
-                        <div id="photo2" class="modal fade" role="dialog">
-                            <div class="modal-dialog modal-md">
-                                <!-- Modal content-->
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title text-center">Kloss i kobiety</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <a class="thumbnail">
-                                            <img src="http://i.iplsc.com/nogi-pan-stawaly-sie-jak-z-waty-kiedy-obok-znajdywal-sie-han/0002AN3APVD6P394-C122-F4.jpg" alt="Kloss i kobiety">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- xs opinion button-->
-                        <div class="visible-xs-block">
-                            <div class="dropdown dropdown-btn pull-left">
-                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Lubię to! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Topowa scena</a></li>
-                                    <li><a href="#">Kanon</a></li>
-                                    <li><a href="#">Jedna z moich ulubionych</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown dropdown-btn pull-right">
-                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Nie lubię! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Przeceniona</a></li>
-                                    <li><a href="#">Pomyłka roku</a></li>
-                                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </figure>
-                    <!-- sm opinion buttons-->
-                    <div class="visible-sm-block">
-                        <div class="col-sm-6">
-                            <div class="dropdown dropdown-btn pull-left">
-                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Lubię to! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Topowa scena</a></li>
-                                    <li><a href="#">Kanon</a></li>
-                                    <li><a href="#">Jedna z moich ulubionych</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown dropdown-btn pull-right">
-                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Nie lubię! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Przeceniona</a></li>
-                                    <li><a href="#">Pomyłka roku</a></li>
-                                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="dropdown dropdown-btn pull-left">
-                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Lubię to! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Topowa scena</a></li>
-                                    <li><a href="#">Kanon</a></li>
-                                    <li><a href="#">Jedna z moich ulubionych</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown dropdown-btn pull-right">
-                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Nie lubię! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Przeceniona</a></li>
-                                    <li><a href="#">Pomyłka roku</a></li>
-                                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <figure class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="hidden-xs visible-sm-block visible-md-block visible-lg-block">
-                            <a href="#" class="thumbnail" data-toggle="modal" data-target="#photo3">
-                                <img src="http://blog.cdp.pl/wp-content/uploads/2014/05/stawka.jpg" alt="Kloss w opałach">
-                            </a>
-                        </div>
-                        <div class="visible-xs-block">
-                            <a class="thumbnail">
-                                <img src="http://blog.cdp.pl/wp-content/uploads/2014/05/stawka.jpg" alt="Kloss w opałach">
-                            </a>
-                        </div>
-                        <!-- Modal -->
-                        <div id="photo3" class="modal fade" role="dialog">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title text-center">Hans w opałach</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <a href="#" class="thumbnail">
-                                            <img src="http://blog.cdp.pl/wp-content/uploads/2014/05/stawka.jpg" alt="Kloss w opałach">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- xs opinion button-->
-                        <div class="visible-xs-block">
-                            <div class="dropdown dropdown-btn pull-left">
-                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Lubię to! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Topowa scena</a></li>
-                                    <li><a href="#">Kanon</a></li>
-                                    <li><a href="#">Jedna z moich ulubionych</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown dropdown-btn pull-right">
-                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Nie lubię! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Przeceniona</a></li>
-                                    <li><a href="#">Pomyłka roku</a></li>
-                                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </figure>
-                    <figure class="col-xs-12 col-sm-6 col-md-3">
-                        <div class="hidden-xs visible-sm-block visible-md-block visible-lg-block">
-                            <a href="#" class="thumbnail" data-toggle="modal" data-target="#photo4">
-                                <img src="http://i.iplsc.com/kadr-z-serialu-stawka-wieksza-niz-zycie/000497R95UVTJAQV-C122-F4.jpg" alt="Kloss nadaje">
-                            </a>
-                        </div>
-                        <div class="visible-xs-block">
-                            <a class="thumbnail">
-                                <img src="http://i.iplsc.com/kadr-z-serialu-stawka-wieksza-niz-zycie/000497R95UVTJAQV-C122-F4.jpg" alt="Kloss nadaje">
-                            </a>
-                        </div>
-                        <!-- Modal -->
-                        <div id="photo4" class="modal fade" role="dialog">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                        <h4 class="modal-title text-center">J-23 nadaje</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <a href="#" class="thumbnail">
-                                            <img src="http://i.iplsc.com/kadr-z-serialu-stawka-wieksza-niz-zycie/000497R95UVTJAQV-C122-F4.jpg" alt="Kloss nadaje">
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- xs opinion button-->
-                        <div class="visible-xs-block">
-                            <div class="dropdown dropdown-btn pull-left">
-                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Lubię to! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Topowa scena</a></li>
-                                    <li><a href="#">Kanon</a></li>
-                                    <li><a href="#">Jedna z moich ulubionych</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown dropdown-btn pull-right">
-                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Nie lubię! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Przeceniona</a></li>
-                                    <li><a href="#">Pomyłka roku</a></li>
-                                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </figure>
-                    <!-- sm opinion buttons-->
-                    <div class="visible-sm-block">
-                        <div class="col-sm-6">
-                            <div class="dropdown dropdown-btn pull-left">
-                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Lubię to! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Topowa scena</a></li>
-                                    <li><a href="#">Kanon</a></li>
-                                    <li><a href="#">Jedna z moich ulubionych</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown dropdown-btn pull-right">
-                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Nie lubię! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Przeceniona</a></li>
-                                    <li><a href="#">Pomyłka roku</a></li>
-                                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="dropdown dropdown-btn pull-left">
-                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Lubię to! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Topowa scena</a></li>
-                                    <li><a href="#">Kanon</a></li>
-                                    <li><a href="#">Jedna z moich ulubionych</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown dropdown-btn pull-right">
-                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Nie lubię! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Przeceniona</a></li>
-                                    <li><a href="#">Pomyłka roku</a></li>
-                                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- lg & md opinion buttons -->
-                <div class="visible-lg-block visible-md-block">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="dropdown dropdown-btn pull-left">
-                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Lubię to! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Topowa scena</a></li>
-                                    <li><a href="#">Kanon</a></li>
-                                    <li><a href="#">Jedna z moich ulubionych</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown dropdown-btn pull-right">
-                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Nie lubię! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Przeceniona</a></li>
-                                    <li><a href="#">Pomyłka roku</a></li>
-                                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="dropdown dropdown-btn pull-left">
-                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Lubię to! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Topowa scena</a></li>
-                                    <li><a href="#">Kanon</a></li>
-                                    <li><a href="#">Jedna z moich ulubionych</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown dropdown-btn pull-right">
-                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Nie lubię! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Przeceniona</a></li>
-                                    <li><a href="#">Pomyłka roku</a></li>
-                                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="dropdown dropdown-btn pull-left">
-                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Lubię to! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Topowa scena</a></li>
-                                    <li><a href="#">Kanon</a></li>
-                                    <li><a href="#">Jedna z moich ulubionych</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown dropdown-btn pull-right">
-                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Nie lubię! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Przeceniona</a></li>
-                                    <li><a href="#">Pomyłka roku</a></li>
-                                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="dropdown dropdown-btn pull-left">
-                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Lubię to! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Topowa scena</a></li>
-                                    <li><a href="#">Kanon</a></li>
-                                    <li><a href="#">Jedna z moich ulubionych</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown dropdown-btn pull-right">
-                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Nie lubię! <span class="caret"></span>
-                                            </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Przeceniona</a></li>
-                                    <li><a href="#">Pomyłka roku</a></li>
-                                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="odcinki">
-            <div class="container">
-                <div class="table-responsive">
-                    <table class="table table-hover table-striped table-responsive">
-                        <caption class="h2">Zestawienie odcinków serialu</caption>
-                        <thead>
-                            <tr>
-                                <th># </th>
-                                <th>Tytuł</th>
-                                <th>Reżyser</th>
-                                <th>data premiery</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Wiem, kim jesteś” </td>
-                                <td>Janusz Morgenstern </td>
-                                <td>10.10.1968 </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td> „Hotel Excelsior” </td>
-                                <td>Andrzej Konic</td>
-                                <td>17.10.1968</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>„Ściśle tajne”</td>
-                                <td>Janusz Morgenstern</td>
-                                <td>24.10.1968</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer id="kontakt" class="form">
-        <div class="container">
-            <h2>Zostaw swoje uwagi</h2>
-            <form>
-                <div class="row">
-                    <div class="form-group col-xs-12 col-sm-6 col-md-6">
-                        <label for="inputName">Imię</label>
-                        <input type="text" class="form-control " id="inputName" placeholder="Imię">
-                    </div>
-                    <div class="form-group col-xs-12 col-sm-6 col-md-6">
-                        <label for="inputEmail">Adres e-mail</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="adres@przykład.com">
-                    </div>
-                    <div class="form-group ">
-                        <label for="inputOpinion">Uwagi</label>
-                        <textarea class="form-control" id="inputOpinion" rows="3" placeholder="Twoje uwagi"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-default">Złóż</button>
-                </div>
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle collapsed"
+              data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand scroll" href="#header">
+              <img
+                alt="Brand"
+                src="http://nieszablonowo.pl/wp-content/uploads/2013/08/image015.jpg"
+                height="30"
+                width="20"
+              />
+            </a>
+          </div>
+          <div
+            class="collapse navbar-collapse"
+            id="bs-example-navbar-collapse-1"
+          >
+            <ul class="nav navbar-nav">
+              <li><a class="scroll showMain" href="#main">Serial</a></li>
+              <li><a class="scroll" href="#galeria">Galeria</a></li>
+              <li><a class="scroll" href="#kontakt">Kontakt</a></li>
+            </ul>
+            <form class="navbar-form navbar-right">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Szukaj" />
+              </div>
+              <button type="submit" class="btn btn-default">Szukaj</button>
             </form>
+          </div>
         </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-</body>
+      </nav>
+    </header>
 
+    <section class="hero">
+      <div class="container">
+        <div id="j23Carousel" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li
+              data-target="#j23Carousel"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#j23Carousel" data-slide-to="1"></li>
+            <li data-target="#j23Carousel" data-slide-to="2"></li>
+            <li data-target="#j23Carousel" data-slide-to="3"></li>
+            <li data-target="#j23Carousel" data-slide-to="4"></li>
+          </ol>
+
+          <div class="carousel-inner" role="listbox">
+            <div class="item active item-0">
+              <div class="carousel-caption">
+                <h2 class="text-center">
+                  Stawka większa niż życie!<small
+                    ><p><q>J-23 znów nadaje</q></p></small
+                  >
+                </h2>
+                <a
+                  class="btn btn-primary center-block scroll showMain"
+                  href="#main"
+                  >Zobacz więcej!</a
+                >
+              </div>
+            </div>
+            <div class="item item-1">
+              <div class="carousel-caption">
+                <h2 class="text-center">Bruner, Ty...</h2>
+                <a
+                  id="showQuotes"
+                  href="#main"
+                  class="btn btn-primary center-block scroll"
+                  >Cytaty</a
+                >
+              </div>
+            </div>
+            <div class="item item-2">
+              <div class="carousel-caption">
+                <h2 class="text-center">Zobacz galerię!</h2>
+                <a class="btn btn-primary center-block scroll" href="#galeria"
+                  >Oglądam!</a
+                >
+              </div>
+            </div>
+            <div class="item item-3">
+              <div class="carousel-caption">
+                <h2 class="text-center">Najlepsze kasztany...</h2>
+                <a
+                  id="showDialogs"
+                  class="btn btn-primary center-block scroll"
+                  href="#main"
+                  >Dialogi</a
+                >
+              </div>
+            </div>
+            <div class="item item-4">
+              <div class="carousel-caption">
+                <h2 class="text-center">O Hansie</h2>
+                <a
+                  id="showHans"
+                  class="btn btn-primary center-block scroll"
+                  href="#main"
+                  >Czytam</a
+                >
+              </div>
+            </div>
+          </div>
+          <a
+            class="left carousel-control"
+            href="#j23Carousel"
+            role="button"
+            data-slide="prev"
+          >
+            <span
+              class="glyphicon glyphicon-chevron-left"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a
+            class="right carousel-control"
+            href="#j23Carousel"
+            role="button"
+            data-slide="next"
+          >
+            <span
+              class="glyphicon glyphicon-chevron-right"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <main id="main">
+      <section class="cytatySection">
+        <div class="container">
+          <ul class="nav nav-pills nav-justified">
+            <li id="pillAboutSeries" class="active ">
+              <a data-toggle="pill" href="#aboutSeries">O serialu</a>
+            </li>
+            <li id="pillHans">
+              <a data-toggle="pill" href="#hans">O Hansie</a>
+            </li>
+            <li id="pillCytaty">
+              <a data-toggle="pill" href="#cytaty">Cytaty</a>
+            </li>
+            <li id="pillDialogi">
+              <a data-toggle="pill" href="#dialogi">Dialogi</a>
+            </li>
+          </ul>
+          <div class="tab-content">
+            <div id="aboutSeries" class="tab-pane fade in active">
+              <h3>Fabuła</h3>
+              <p>
+                Akcja serialu rozpoczyna się w roku 1941. Młody Polak Stanisław
+                Kolicki zamierza przedostać się do Związku Radzieckiego, by
+                przekazać informację o koncentracji wojsk niemieckich na
+                granicy. Zostaje przez radziecki wywiad zatrzymany. Będąc
+                łudząco podobnym do niedawno aresztowanego oficera niemieckiego
+                Hansa Klossa, zajmuje miejsce swojego „sobowtóra” w wywiadzie
+                niemieckim – Abwehrze i jako agent J-23 rozpoczyna misję
+                szpiegowską.
+              </p>
+              <h3>Twórcy</h3>
+              <p>
+                Scenariusz serialu napisali Andrzej Szypulski i Zbigniew Safjan,
+                zainspirowani pierwszym filmem o Jamesie Bondzie, Doktor No z
+                1962.
+              </p>
+              <p>
+                Scenariusz – Andrzej Zbych (pseudonim, piszących razem, Andrzeja
+                Szypulskiego i Zbigniewa Safjana).
+              </p>
+              <p>
+                Reżyseria – Janusz Morgenstern i Andrzej Konic (po 9 odcinków).
+              </p>
+            </div>
+            <div id="hans" class="tab-pane fade">
+              <div class="row">
+                <div class="media">
+                  <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                    <div class="media-left">
+                      <a
+                        href="http://kuzynka-edyta.blogspot.com/2009/08/stawka-wieksza-niz-zycie-16.html"
+                      >
+                        <img
+                          class="media-object"
+                          src="http://2.bp.blogspot.com/-HvF63O_hffw/VnRUjNx7toI/AAAAAAAADkA/4qLFQDz_YaE/s1600/Stawka%2Bwi%25C4%2599ksza%2Bni%25C5%25BC%2B%25C5%25BCycie%2B-%2B16.jpg"
+                          alt="Hans Kloss"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8">
+                    <div class="media-body">
+                      <h3 class="media-heading">O Hansie...</h3>
+                      <p class="text-justify">
+                        <strong>Hans Kloss</strong> – fikcyjny bohater
+                        (właściwie dwaj bohaterowie, gdyż zarówno więziony w
+                        ZSRR Niemiec o takim imieniu i nazwisku, jak i
+                        podszywający się pod niego Polak Stanisław Kolicki)
+                        serii przedstawień Teatru Telewizji, pt. Stawka większa
+                        niż życie, serialu telewizyjnego pod tym samym tytułem,
+                        serii opowiadań w formie książkowej (zbeletryzowane
+                        scenariusze), komiksów z cyklu Kapitan Kloss, gry
+                        komputerowej Hans Kloss wydanej przez LK Avalon w 1992
+                        oraz filmu Hans Kloss. Stawka większa niż śmierć.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="cytaty" class="tab-pane fade">
+              <h3 class="bg-danger">Herman Brunner</h3>
+              <blockquote>
+                <p>
+                  Nie mogę patrzeć na bitego człowieka, nie mogę! Jeżeli bije
+                  ktoś inny.
+                </p>
+                <footer>
+                  <cite title="Source Title">Odc. 8, Wielka wsypa</cite>
+                </footer>
+              </blockquote>
+              <blockquote>
+                <p>Brunner alkohol i kobiety wyczuwa na kilometr.</p>
+                <footer>
+                  <cite title="Source Title">Odc. 14, Edyta</cite>
+                </footer>
+              </blockquote>
+              <blockquote>
+                <p>Ja nigdy nie przegrywam ostatniej bitwy.</p>
+                <footer>
+                  <cite title="Source Title">Odc. 15, Oblężenie</cite>
+                </footer>
+              </blockquote>
+              <h3 class="bg-success">Hans Kloss</h3>
+              <blockquote>
+                <p>
+                  To świnia! Mógł mnie ochlapać. Nie potrafi uszanować
+                  niemieckiego munduru.
+                </p>
+                <footer>
+                  <cite title="Source Title">Odc. 8, Wielka wsypa</cite>
+                </footer>
+              </blockquote>
+              <blockquote>
+                <p>Takie sztuczki nie ze mną, Brunner.</p>
+                <footer>
+                  <cite title="Source Title">odc. 14, Edyta. </cite>Cytat
+                  popularny w nieprawidłowej wersji:
+                  <q><strong>Nie ze mną te numery, Brunner.</strong></q>
+                </footer>
+              </blockquote>
+              <blockquote>
+                <p>Wyjątkowa z ciebie kanalia, Brunner!</p>
+                <footer>
+                  <cite title="Source Title">Odc. 15, Oblężenie. </cite>Cytat
+                  popularny w nieprawidłowej wersji:
+                  <q><strong>Brunner, ty świnio!</strong></q>
+                </footer>
+              </blockquote>
+            </div>
+            <div id="dialogi" class="tab-pane fade">
+              <h3>Kasztany</h3>
+              <blockquote>
+                <p>
+                  <b>Łącznik: </b>W Paryżu najlepsze kasztany są na placu
+                  Pigalle.
+                </p>
+                <p><b>Kloss: </b>Zuzanna lubi je tylko jesienią.</p>
+                <p><b>Łącznik: </b>Przesyła ci świeżą partię.</p>
+                <footer>
+                  <cite title="Source Title">Odc. 11, Hasło.</cite>
+                </footer>
+              </blockquote>
+              <h3>Nord</h3>
+              <blockquote>
+                <p><b>Kloss: </b>Jak powinien wyglądać prawdziwy Nordyk?</p>
+                <p>
+                  <b>Eryk Getting: </b>Blondyn jak Hitler, smukły jak Göring,
+                  wysoki jak Goebbels.
+                </p>
+                <footer>
+                  <cite title="Source Title"
+                    >Odc. 9, Genialny plan pułkownika Krafta</cite
+                  >
+                </footer>
+              </blockquote>
+              <h3>Idiota</h3>
+              <blockquote>
+                <p>
+                  <b>Wilhelm Canaris:</b> Dlaczego interesuje pana Christin
+                  Kield?
+                </p>
+                <p><b>Kloss:</b> Zakochałem się w niej.</p>
+                <p>
+                  <b>Wilhelm Canaris:</b> Pan jest idiotą, panie poruczniku.
+                </p>
+                <p><b>Kloss:</b> Tak jest, panie admirale.</p>
+                <p><b>Wilhelm Canaris:</b> No więc to już ustaliliśmy.</p>
+                <footer>
+                  <cite title="Source Title">Odc. 12, Zdrada.</cite>
+                </footer>
+              </blockquote>
+              <h3>Dyskrecja</h3>
+              <blockquote>
+                <p>
+                  <b> Geibel: </b>Gdybym był niedyskretny, zapytałbym, skąd pan
+                  ma na pięciomarkowe cygara.
+                </p>
+                <p><b>Brunner: </b>Ba! A gdybym ja był niedyskretny?</p>
+                <p><b>Geibel: </b>Na szczęście obaj jesteśmy dyskretni.</p>
+                <footer>
+                  <cite title="Source Title">Odc. 12, Zdrada.</cite>
+                </footer>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="galeria" class="gallery">
+        <div class="container">
+          <h2>Galeria</h2>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <figure class="col-xs-12 col-sm-6 col-md-3 clearfix">
+              <div
+                class="hidden-xs visible-sm-block visible-md-block visible-lg-block"
+              >
+                <a
+                  href="#"
+                  class="thumbnail"
+                  data-toggle="modal"
+                  data-target="#photo1"
+                >
+                  <img
+                    src="http://bi.gazeta.pl/im/85/24/e1/z14754949Q,Hans-Kloss-i-Hermann-Brunner.jpg"
+                    alt="Kloss i Hermann-Brunner"
+                  />
+                </a>
+              </div>
+              <div class="visible-xs-block">
+                <a class="thumbnail">
+                  <img
+                    src="http://bi.gazeta.pl/im/85/24/e1/z14754949Q,Hans-Kloss-i-Hermann-Brunner.jpg"
+                    alt="Kloss i Hermann-Brunner"
+                  />
+                </a>
+              </div>
+              <!-- Modal -->
+              <div id="photo1" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                      </button>
+                      <h4 class="modal-title text-center">Hans i Brunner</h4>
+                    </div>
+                    <div class="modal-body">
+                      <a class="thumbnail">
+                        <img
+                          src="http://bi.gazeta.pl/im/85/24/e1/z14754949Q,Hans-Kloss-i-Hermann-Brunner.jpg"
+                          alt="Kloss i Hermann-Brunner"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- xs opinion button-->
+              <div class="visible-xs-block clearfix">
+                <div class="dropdown dropdown-btn pull-left">
+                  <button
+                    type="button"
+                    class="btn btn-success dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Lubię to! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Topowa scena</a></li>
+                    <li><a href="#">Kanon</a></li>
+                    <li><a href="#">Jedna z moich ulubionych</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown dropdown-btn pull-right">
+                  <button
+                    type="button"
+                    class="btn btn-danger dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Nie lubię! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Przeceniona</a></li>
+                    <li><a href="#">Pomyłka roku</a></li>
+                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
+                  </ul>
+                </div>
+              </div>
+            </figure>
+            <figure class="col-xs-12 col-sm-6 col-md-3">
+              <div
+                class="hidden-xs visible-sm-block visible-md-block visible-lg-block"
+              >
+                <a
+                  href="#"
+                  class="thumbnail"
+                  data-toggle="modal"
+                  data-target="#photo2"
+                >
+                  <img
+                    src="http://i.iplsc.com/nogi-pan-stawaly-sie-jak-z-waty-kiedy-obok-znajdywal-sie-han/0002AN3APVD6P394-C122-F4.jpg"
+                    alt="Kloss i kobiety"
+                  />
+                </a>
+              </div>
+              <div class="visible-xs-block">
+                <a class="thumbnail">
+                  <img
+                    src="http://i.iplsc.com/nogi-pan-stawaly-sie-jak-z-waty-kiedy-obok-znajdywal-sie-han/0002AN3APVD6P394-C122-F4.jpg"
+                    alt="Kloss i kobiety"
+                  />
+                </a>
+              </div>
+              <!-- Modal -->
+              <div id="photo2" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-md">
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                      </button>
+                      <h4 class="modal-title text-center">Kloss i kobiety</h4>
+                    </div>
+                    <div class="modal-body">
+                      <a class="thumbnail">
+                        <img
+                          src="http://i.iplsc.com/nogi-pan-stawaly-sie-jak-z-waty-kiedy-obok-znajdywal-sie-han/0002AN3APVD6P394-C122-F4.jpg"
+                          alt="Kloss i kobiety"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- xs opinion button-->
+              <div class="visible-xs-block">
+                <div class="dropdown dropdown-btn pull-left">
+                  <button
+                    type="button"
+                    class="btn btn-success dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Lubię to! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Topowa scena</a></li>
+                    <li><a href="#">Kanon</a></li>
+                    <li><a href="#">Jedna z moich ulubionych</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown dropdown-btn pull-right">
+                  <button
+                    type="button"
+                    class="btn btn-danger dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Nie lubię! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Przeceniona</a></li>
+                    <li><a href="#">Pomyłka roku</a></li>
+                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
+                  </ul>
+                </div>
+              </div>
+            </figure>
+            <!-- sm opinion buttons-->
+            <div class="visible-sm-block">
+              <div class="col-sm-6">
+                <div class="dropdown dropdown-btn pull-left">
+                  <button
+                    type="button"
+                    class="btn btn-success dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Lubię to! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Topowa scena</a></li>
+                    <li><a href="#">Kanon</a></li>
+                    <li><a href="#">Jedna z moich ulubionych</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown dropdown-btn pull-right">
+                  <button
+                    type="button"
+                    class="btn btn-danger dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Nie lubię! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Przeceniona</a></li>
+                    <li><a href="#">Pomyłka roku</a></li>
+                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="dropdown dropdown-btn pull-left">
+                  <button
+                    type="button"
+                    class="btn btn-success dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Lubię to! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Topowa scena</a></li>
+                    <li><a href="#">Kanon</a></li>
+                    <li><a href="#">Jedna z moich ulubionych</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown dropdown-btn pull-right">
+                  <button
+                    type="button"
+                    class="btn btn-danger dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Nie lubię! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Przeceniona</a></li>
+                    <li><a href="#">Pomyłka roku</a></li>
+                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <figure class="col-xs-12 col-sm-6 col-md-3">
+              <div
+                class="hidden-xs visible-sm-block visible-md-block visible-lg-block"
+              >
+                <a
+                  href="#"
+                  class="thumbnail"
+                  data-toggle="modal"
+                  data-target="#photo3"
+                >
+                  <img
+                    src="https://i.iplsc.com/kadr-z-serialu-stawka-wieksza-niz-zycie/0006TZNSLWSB6W3P-C122-F4.jpg"
+                    alt="Kloss w opałach"
+                  />
+                </a>
+              </div>
+              <div class="visible-xs-block">
+                <a class="thumbnail">
+                  <img
+                    src="https://i.iplsc.com/kadr-z-serialu-stawka-wieksza-niz-zycie/0006TZNSLWSB6W3P-C122-F4.jpg"
+                    alt="Kloss w opałach"
+                  />
+                </a>
+              </div>
+              <!-- Modal -->
+              <div id="photo3" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                      </button>
+                      <h4 class="modal-title text-center">Hans w opałach</h4>
+                    </div>
+                    <div class="modal-body">
+                      <a href="#" class="thumbnail">
+                        <img
+                          src="https://i.iplsc.com/kadr-z-serialu-stawka-wieksza-niz-zycie/0006TZNSLWSB6W3P-C122-F4.jpg"
+                          alt="Kloss w opałach"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- xs opinion button-->
+              <div class="visible-xs-block">
+                <div class="dropdown dropdown-btn pull-left">
+                  <button
+                    type="button"
+                    class="btn btn-success dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Lubię to! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Topowa scena</a></li>
+                    <li><a href="#">Kanon</a></li>
+                    <li><a href="#">Jedna z moich ulubionych</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown dropdown-btn pull-right">
+                  <button
+                    type="button"
+                    class="btn btn-danger dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Nie lubię! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Przeceniona</a></li>
+                    <li><a href="#">Pomyłka roku</a></li>
+                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
+                  </ul>
+                </div>
+              </div>
+            </figure>
+            <figure class="col-xs-12 col-sm-6 col-md-3">
+              <div
+                class="hidden-xs visible-sm-block visible-md-block visible-lg-block"
+              >
+                <a
+                  href="#"
+                  class="thumbnail"
+                  data-toggle="modal"
+                  data-target="#photo4"
+                >
+                  <img
+                    src="http://i.iplsc.com/kadr-z-serialu-stawka-wieksza-niz-zycie/000497R95UVTJAQV-C122-F4.jpg"
+                    alt="Kloss nadaje"
+                  />
+                </a>
+              </div>
+              <div class="visible-xs-block">
+                <a class="thumbnail">
+                  <img
+                    src="http://i.iplsc.com/kadr-z-serialu-stawka-wieksza-niz-zycie/000497R95UVTJAQV-C122-F4.jpg"
+                    alt="Kloss nadaje"
+                  />
+                </a>
+              </div>
+              <!-- Modal -->
+              <div id="photo4" class="modal fade" role="dialog">
+                <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">
+                        &times;
+                      </button>
+                      <h4 class="modal-title text-center">J-23 nadaje</h4>
+                    </div>
+                    <div class="modal-body">
+                      <a href="#" class="thumbnail">
+                        <img
+                          src="http://i.iplsc.com/kadr-z-serialu-stawka-wieksza-niz-zycie/000497R95UVTJAQV-C122-F4.jpg"
+                          alt="Kloss nadaje"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- xs opinion button-->
+              <div class="visible-xs-block">
+                <div class="dropdown dropdown-btn pull-left">
+                  <button
+                    type="button"
+                    class="btn btn-success dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Lubię to! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Topowa scena</a></li>
+                    <li><a href="#">Kanon</a></li>
+                    <li><a href="#">Jedna z moich ulubionych</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown dropdown-btn pull-right">
+                  <button
+                    type="button"
+                    class="btn btn-danger dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Nie lubię! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Przeceniona</a></li>
+                    <li><a href="#">Pomyłka roku</a></li>
+                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
+                  </ul>
+                </div>
+              </div>
+            </figure>
+            <!-- sm opinion buttons-->
+            <div class="visible-sm-block">
+              <div class="col-sm-6">
+                <div class="dropdown dropdown-btn pull-left">
+                  <button
+                    type="button"
+                    class="btn btn-success dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Lubię to! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Topowa scena</a></li>
+                    <li><a href="#">Kanon</a></li>
+                    <li><a href="#">Jedna z moich ulubionych</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown dropdown-btn pull-right">
+                  <button
+                    type="button"
+                    class="btn btn-danger dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Nie lubię! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Przeceniona</a></li>
+                    <li><a href="#">Pomyłka roku</a></li>
+                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="dropdown dropdown-btn pull-left">
+                  <button
+                    type="button"
+                    class="btn btn-success dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Lubię to! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Topowa scena</a></li>
+                    <li><a href="#">Kanon</a></li>
+                    <li><a href="#">Jedna z moich ulubionych</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown dropdown-btn pull-right">
+                  <button
+                    type="button"
+                    class="btn btn-danger dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Nie lubię! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Przeceniona</a></li>
+                    <li><a href="#">Pomyłka roku</a></li>
+                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- lg & md opinion buttons -->
+          <div class="visible-lg-block visible-md-block">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="dropdown dropdown-btn pull-left">
+                  <button
+                    type="button"
+                    class="btn btn-success dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Lubię to! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Topowa scena</a></li>
+                    <li><a href="#">Kanon</a></li>
+                    <li><a href="#">Jedna z moich ulubionych</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown dropdown-btn pull-right">
+                  <button
+                    type="button"
+                    class="btn btn-danger dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Nie lubię! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Przeceniona</a></li>
+                    <li><a href="#">Pomyłka roku</a></li>
+                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="dropdown dropdown-btn pull-left">
+                  <button
+                    type="button"
+                    class="btn btn-success dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Lubię to! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Topowa scena</a></li>
+                    <li><a href="#">Kanon</a></li>
+                    <li><a href="#">Jedna z moich ulubionych</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown dropdown-btn pull-right">
+                  <button
+                    type="button"
+                    class="btn btn-danger dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Nie lubię! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Przeceniona</a></li>
+                    <li><a href="#">Pomyłka roku</a></li>
+                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="dropdown dropdown-btn pull-left">
+                  <button
+                    type="button"
+                    class="btn btn-success dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Lubię to! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Topowa scena</a></li>
+                    <li><a href="#">Kanon</a></li>
+                    <li><a href="#">Jedna z moich ulubionych</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown dropdown-btn pull-right">
+                  <button
+                    type="button"
+                    class="btn btn-danger dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Nie lubię! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Przeceniona</a></li>
+                    <li><a href="#">Pomyłka roku</a></li>
+                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="dropdown dropdown-btn pull-left">
+                  <button
+                    type="button"
+                    class="btn btn-success dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Lubię to! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Topowa scena</a></li>
+                    <li><a href="#">Kanon</a></li>
+                    <li><a href="#">Jedna z moich ulubionych</a></li>
+                  </ul>
+                </div>
+                <div class="dropdown dropdown-btn pull-right">
+                  <button
+                    type="button"
+                    class="btn btn-danger dropdown-toggle"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    Nie lubię! <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Przeceniona</a></li>
+                    <li><a href="#">Pomyłka roku</a></li>
+                    <li><a href="#">Scenarzysta zapił i tak poszło...</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="odcinki">
+        <div class="container">
+          <div class="table-responsive">
+            <table class="table table-hover table-striped table-responsive">
+              <caption class="h2">
+                Zestawienie odcinków serialu
+              </caption>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Tytuł</th>
+                  <th>Reżyser</th>
+                  <th>data premiery</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Wiem, kim jesteś”</td>
+                  <td>Janusz Morgenstern</td>
+                  <td>10.10.1968</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>„Hotel Excelsior”</td>
+                  <td>Andrzej Konic</td>
+                  <td>17.10.1968</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>„Ściśle tajne”</td>
+                  <td>Janusz Morgenstern</td>
+                  <td>24.10.1968</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="kontakt" class="form">
+      <div class="container">
+        <h2>Zostaw swoje uwagi</h2>
+        <form>
+          <div class="row">
+            <div class="form-group col-xs-12 col-sm-6 col-md-6">
+              <label for="inputName">Imię</label>
+              <input
+                type="text"
+                class="form-control "
+                id="inputName"
+                placeholder="Imię"
+              />
+            </div>
+            <div class="form-group col-xs-12 col-sm-6 col-md-6">
+              <label for="inputEmail">Adres e-mail</label>
+              <input
+                type="email"
+                class="form-control"
+                id="inputEmail"
+                placeholder="adres@przykład.com"
+              />
+            </div>
+            <div class="form-group ">
+              <label for="inputOpinion">Uwagi</label>
+              <textarea
+                class="form-control"
+                id="inputOpinion"
+                rows="3"
+                placeholder="Twoje uwagi"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-default">Złóż</button>
+          </div>
+        </form>
+      </div>
+    </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>
